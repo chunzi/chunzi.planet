@@ -5,16 +5,20 @@ h1, h2, h3, h4, #header strong {
 .entry-userpic { display: none; }
 
 #adsense {
-    border: none ; position: fixed; top: 20pt; right: 10pt;
+    border: none ; position: fixed; top: 1em; right: 5em;
+}
+#feedburner {
+    border: 0pt none ; margin: 0pt; position: fixed; bottom: 5px; right: 8.5em;
 }
 #banner {
-    margin: 0 10px 1em;
+    margin: 0 0 1em 6em;
 }
 .entry {
-    margin:0 250px 3.5em 10px;
+    margin:0 250px 3.5em 5em;
 }
 .module {
-    margin:0 250px 0 10px;
+    margin:0 250px 0 5em;
 }
 
 .entry .entry-content pre { width 100%; overflow: auto; margin: 20px 0 20px 20px; border-left: solid 2px #999; }
+.entry .entry-footer { font-size: 0.9em; color: #d6d6d6; border-top: solid 1px #f6f6f6; padding-top: 0.3em;  margin-top: 2em; }
