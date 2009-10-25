@@ -1,0 +1,50 @@
+global:
+  assets_path: /home/chunzi/chunzi.planet/plagger-assets
+  log:
+    level: debug
+
+plugins:
+  - module: Subscription::Config
+    config:
+      feed:
+        - http://chunzi.me/post/tag/perl/feed
+        - http://islue.blogspot.com/search/label/perl
+        - http://riusksk.blogbus.com/tag/perl/
+        - http://blog.chinaunix.net/u/9143/article_14745.html
+        - http://www.perlersh.org/blog/rss2.html?name=Perl
+        - http://www.fayland.org/blog/
+        - http://agentzh.spaces.live.com/blog/
+        - http://purl.posterous.com/
+        - http://www.wanglianghome.org/blog/
+        - http://chupei.pm.org/
+        - http://liucheng.name/tag/perl/
+        - http://hi.baidu.com/smallfish_xy/blog/category/Perl
+        - http://tech.idv2.com/category/perl/
+        - http://remonstrate.wordpress.com/category/programming-languages/perl/
+        - http://www.jeftom.com/?tag=perl
+        - http://blog.yaknet.cn/tag/perl/
+        - http://boyun.sh.cn/blog/?cat=30
+        - http://gugod.org/perl/
+        - http://my.huhoo.net/mt/mt-search.cgi?blog_id=1&tag=perl&limit=20
+        - http://cyclelifealone.posterous.com/
+        - http://blog.sakuras.cn/mt/mt-search.cgi?blog_id=1&tag=perl&limit=20
+        - http://wenbinhome.blogspot.com/search/label/perl
+        - http://blog.gslin.org/
+        - http://c9s.blogspot.com/search/label/Perl
+        - http://blog.dragon2.net/tag/perl
+        - http://navyblueshellingford.blogspot.com/search/label/perl
+        - http://victor.csie.org/blog/archives/tag/perl
+        - http://jeremyqing.blogspot.com/search/label/shell%2Fperl
+  - module: Bundle::Planet
+    config:
+      extra_rule:
+        expression: grep $args->{entry}->body_text =~ /\b$_\b/i || $args->{entry}->has_tag($_), qw/perl cpan Perl/
+      duration: 50 days
+      title: Planet PerlChina
+      description: Everything Plagger from the Web
+      dir: /home/vhosts/planet.chunzi.me/perl
+      url: http://planet.chunzi.me/perl/
+      theme: perl
+      stylesheet:
+        - http://planet.chunzi.me/css/pico.css
+        - http://planet.chunzi.me/css/patch.css

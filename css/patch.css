@@ -1,0 +1,20 @@
+img { border: 0; }
+h1, h2, h3, h4, #header strong {
+    text-shadow:1px 1px 2px #CCCCCC;
+}
+.entry-userpic { display: none; }
+
+#adsense {
+    border: none ; position: fixed; top: 20pt; right: 10pt;
+}
+#banner {
+    margin: 0 10px 1em;
+}
+.entry {
+    margin:0 250px 3.5em 10px;
+}
+.module {
+    margin:0 250px 0 10px;
+}
+
+.entry .entry-content pre { width 100%; overflow: auto; margin: 20px 0 20px 20px; border-left: solid 2px #999; }
