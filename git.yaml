@@ -1,0 +1,40 @@
+global:
+  assets_path: /home/chunzi/chunzi.planet/plagger-assets
+  log:
+    level: debug
+
+plugins:
+  - module: Subscription::Config
+    config:
+      feed:
+        - http://chunzi.me/post/tag/git/feed
+        - http://www.fayland.org/blog/labels/git.html
+        - http://phoenixtoday.blogbus.com/tag/Git/
+        - http://roclinux.cn/?tag=git
+        - http://xdaqing.blogbus.com/tag/git/
+        - http://www.robinlu.com/blog/archives/tag/git
+        - http://www.wanglianghome.org/blog/
+        - http://c9s.blogspot.com/search/label/Git
+        - http://hi.baidu.com/3444542/blog/category/Git
+        - http://unixhater.com/tag/git
+        - http://www.tabex.org/archives/category/git
+        - http://blog.rogerz.cn/archives/tag/git
+        - http://www.asfun.net/tag/git
+        - http://www.51yu.cn/tags/git/
+        - http://billy3321.blogspot.com/search/label/git
+        - http://blog.jjgod.org/tag/git/
+        - http://xujiang.name/category/git/
+        - http://yegle.net/tag/git/
+  - module: Bundle::Planet
+    config:
+      extra_rule:
+        expression: grep $args->{entry}->body_text =~ /\b$_\b/i || $args->{entry}->has_tag($_), qw/git github/
+      duration: 50 days
+      title: Planet GitChina
+      description: Everything Plagger from the Web
+      dir: /home/vhosts/planet.chunzi.me/git
+      url: http://planet.chunzi.me/git/
+      theme: git
+      stylesheet:
+        - http://planet.chunzi.me/css/pico.css
+        - http://planet.chunzi.me/css/patch.css
