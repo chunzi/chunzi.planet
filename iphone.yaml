@@ -1,0 +1,31 @@
+global:
+  assets_path: /home/chunzi/chunzi.planet/plagger-assets
+  log:
+    level: debug
+
+plugins:
+  - module: Subscription::Config
+    config:
+      feed:
+        - http://chunzi.me/post/tag/iphone/feed
+        - http://blog.tinyau.net/tag/iphone
+        - http://lichen1985.com/blog/?tag=iphone
+        - http://blog.liuhongwei.cn/category/iphone/
+        - http://blogme.cn/herry70s
+        - http://www.daisymarisfung.com/category/play/iphone-play/
+        - http://www.unfish.net/archives/tag/iphone
+        - http://www.robinlu.com/blog/archives/tag/iphone
+        - http://www.v2ex.com/tag/iphone/
+  - module: Bundle::Planet
+    config:
+      extra_rule:
+        expression: grep $args->{entry}->body_text =~ /\b$_\b/i || $args->{entry}->has_tag($_), qw/iphone iPhone/
+      duration: 50 days
+      title: Planet iPhoneChina
+      description: Everything Plagger from the Web
+      dir: /home/vhosts/planet.chunzi.me/iphone
+      url: http://planet.chunzi.me/iphone/
+      theme: iphone
+      stylesheet:
+        - http://planet.chunzi.me/css/pico.css
+        - http://planet.chunzi.me/css/patch.css
