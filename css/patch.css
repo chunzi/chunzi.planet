@@ -10,6 +10,7 @@ h1, h2, h3, h4, #header strong {
 #feedburner {
     border: 0pt none ; margin: 0pt; position: fixed; bottom: 5px; right: 8.5em;
 }
+#updated { margin-left: 2em; color: #999; }
 #banner {
     margin: 0 0 1em 6em;
 }

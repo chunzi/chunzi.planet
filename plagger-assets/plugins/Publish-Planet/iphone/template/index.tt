@@ -80,6 +80,7 @@
               <div class="module-powered module">
                 <div class="module-content">
                 <a href="http://plagger.org/">Powered by Plagger [% context.VERSION %]</a>
+                <span id="updated">Updated at [% USE date; date.format( date.now, '%H:%M:%S %b %d, %Y, %Z' ) %]</span>
                 </div>
               </div>
             </div>
