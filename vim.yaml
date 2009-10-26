@@ -1,0 +1,29 @@
+global:
+  assets_path: /home/chunzi/chunzi.planet/plagger-assets
+  log:
+    level: debug
+
+plugins:
+  - module: Subscription::Config
+    config:
+      feed:
+        - http://chunzi.me/post/tag/vim/feed
+        - http://c9s.blogspot.com/search/label/Vim
+        - http://www.vimer.cn/tag/vim
+        - http://easwy.com/blog/archives/tag/vim/
+        - http://blog.xianyun.org/tag/vim
+        - http://blog.waterlin.org/articles/tag/vim
+        - http://www.leninlee.cn/?tag=vim
+  - module: Bundle::Planet
+    config:
+      extra_rule:
+        expression: grep $args->{entry}->body_text =~ /\b$_\b/i || $args->{entry}->has_tag($_), qw/vim Vim/
+      duration: 50 days
+      title: Planet VimChina
+      description: Everything Plagger from the Web
+      dir: /home/vhosts/planet.chunzi.me/vim
+      url: http://planet.chunzi.me/vim/
+      theme: vim
+      stylesheet:
+        - http://planet.chunzi.me/css/pico.css
+        - http://planet.chunzi.me/css/patch.css

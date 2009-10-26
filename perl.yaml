@@ -35,6 +35,7 @@ plugins:
         - http://navyblueshellingford.blogspot.com/search/label/perl
         - http://victor.csie.org/blog/archives/tag/perl
         - http://jeremyqing.blogspot.com/search/label/shell%2Fperl
+        - http://blog.waterlin.org/articles/tag/perl
   - module: Bundle::Planet
     config:
       extra_rule:
