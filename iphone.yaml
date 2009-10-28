@@ -16,6 +16,7 @@ plugins:
         - http://www.unfish.net/archives/tag/iphone
         - http://www.robinlu.com/blog/archives/tag/iphone
         - http://www.v2ex.com/tag/iphone/
+        - http://www.ifanr.com/tag/apple-iphone
   - module: Bundle::Planet
     config:
       extra_rule:
