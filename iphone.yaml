@@ -18,6 +18,7 @@ plugins:
         - http://www.v2ex.com/tag/iphone/
         - http://www.ifanr.com/tag/apple-iphone
         - http://rockyweek.blogbus.com/c2387519/
+        - http://www.wahaha.com.tw/?tag=iphone
   - module: Bundle::Planet
     config:
       extra_rule:
