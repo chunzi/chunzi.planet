@@ -25,6 +25,7 @@ plugins:
         - http://blog.jjgod.org/tag/git/
         - http://xujiang.name/category/git/
         - http://yegle.net/tag/git/
+        - http://imtx.cn/feed/latest/
   - module: Bundle::Planet
     config:
       extra_rule:
