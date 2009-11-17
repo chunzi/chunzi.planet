@@ -15,6 +15,7 @@ plugins:
         - http://blog.waterlin.org/articles/tag/vim
         - http://www.leninlee.cn/?tag=vim
         - http://www.wentrue.net/blog/?tag=vim
+        - http://coolshell.cn/?tag=vim
   - module: Bundle::Planet
     config:
       extra_rule:
